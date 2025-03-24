@@ -180,3 +180,7 @@ textarea {
     font-size: 40px;
     margin: 15px;
 }
+
+.sidebar ul li a.active-link {
+    background-color: #7c3aed;
+}
