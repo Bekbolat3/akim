@@ -28,3 +28,17 @@ postButton.addEventListener('click', () => {
         textarea.value = '';
     }
 });
+
+
+const iframe = document.getElementById('content-frame');
+
+sidebarLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        sidebarLinks.forEach(l => l.classList.remove('active-link'));
+        link.classList.add('active-link');
+
+        const url = link.getAttribute('data-url');
+        iframe.src = url;
+    });
+});
